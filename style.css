@@ -1,27 +1,80 @@
-/*
-cor primaria:branco
-cor secundaria:preto
-cor de destaque:#5C4661
-*/
-
-html{
-   background-color:#84cc16 ;
-   font-size: medium;
+html {
+   background-color: gray;
+   font-size: 20px;
    color: black;
    scroll-behavior: smooth;
 }
 
 main {
-   background-color: white;
-   margin-left: 3%;
-   margin-right: 3%;
-   margin-bottom: 2%;
-   margin-top: 2%;
+   background-color: #18181b;
+   margin: 2% 3%;
+   text-align: justify;
+   border: 1rem black solid;
+   color: white;
 }
 
-h1, h2, h3{
-   font-family:Verdana, Geneva, Tahoma, sans-serif
+h1, h2, h3 {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
 }
 
-p{text-indent: 1em; font-family: Arial, Helvetica, sans-serif;}
+#rodape {
+   justify-content: center;
+   display: flex;
+}
 
+p, a, ul {
+   text-indent: 1em;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#navegacao ul {
+   display: flex;
+   gap: 2rem;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+}
+
+#navegacao a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.foto img {
+   width: 100%;
+   max-width: 300px;
+   display: block;
+   margin: 1rem auto;
+   border: 1rem #5C4661 solid;
+}
+
+.conteudo, .descricao, #formacao, #certificados, #experiencia, #habilidades {
+   background-color: #18181b;
+   margin: 1rem auto;
+   padding: 1rem;
+   border: 1rem #5C4661 solid;
+   max-width: 700px;
+   width: 90%;
+}
+
+@media screen and (max-width: 768px) {
+   #navegacao {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       padding: 1rem;
+       background-color: gray;
+   }
+
+   #navegacao ul {
+       flex-direction: column;
+       gap: 1rem;
+       width: 100%;
+   }
+
+   .conteudo, .descricao, #formacao, #certificados, #experiencia, #habilidades {
+       width: 90%;
+       margin: 1rem auto;
+   }
+}
